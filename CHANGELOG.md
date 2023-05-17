@@ -1,3 +1,5 @@
-## 0.0.1
+## 1.0.0
 
-* TODO: Describe initial release.
+* Initial release
+* Contains 9 helper methods starting off
+* Added contributing guidelines

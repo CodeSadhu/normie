@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:normie/utils/regex.dart';
@@ -52,6 +54,10 @@ class Normie {
       throw (e.toString());
     }
     return '';
+  }
+
+  static String truncate(String text, int length) {
+    return text.substring(0, length);
   }
 
   static String getStringInitial(String? text) {
@@ -119,5 +125,10 @@ class Normie {
     } catch (e) {
       throw ('Could not retriev file extension. Error: $e');
     }
+  }
+
+  static Color randomColor() {
+    var generatedColor = Random().nextInt(Colors.primaries.length);
+    return Colors.primaries[generatedColor];
   }
 }
