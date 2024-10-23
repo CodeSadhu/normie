@@ -1,66 +1,75 @@
-# Normie - Dart Utility Package
+# Normie 🛠️
 
-Normie is a powerful Dart package that provides a suite of commonly used utility methods to aid Flutter developers in their day-to-day tasks. It offers a collection of convenient features such as date formatters, validators, string manipulation functions, number utilities, color manipulation tools, file handling capabilities, localization support, and much more. Normie aims to streamline the development process and boost productivity by offering a comprehensive set of tools and functionalities.
+Yo! Welcome to Normie v2 - your Flutter/Dart utility belt just got a MAJOR upgrade! We've completely rebuilt everything to make your life even easier 🚀
 
-## Installation
+## What Changed? 🆕
 
-To start using Normie in your Flutter project, follow these simple steps:
+If you're coming from v1, heads up! We've reorganized everything into neat categories to keep things clean. Instead of `Normie.method()`, now you do `Normie.category.method()`. Trust us, it's way better this way!
 
-1. Open your project's `pubspec.yaml` file.
-2. Add `normie` as a dependency:
+Example:
+```dart
+// Old way (v1)
+Normie.hexToColor('#ff42069');
 
-   ```yaml
-   dependencies:
-     normie: ^1.0.0
-   ```
+// New way (v2)
+Normie.palette.hexToColor('#ff42069');
+```
 
-3. Run `flutter pub get` in your terminal or click on "Packages get" in your IDE.
+## What's in the box? 📦
 
-## Usage
+We've gone from 9 methods to a whole suite of tools:
 
-Import Normie into your Dart file and leverage its wide **array** of utility methods to simplify your development tasks. Here's an example showcasing some of the capabilities provided by Normie:
+- 🕒 **Cache stuff**  
+  Store things in memory, make em expire when you want
+- ✅ **Validation**  
+  Check emails, phone numbers, credit cards without the hastle
+- 📅 **Date/Time**  
+  Format dates, get time ago, countdowns and more
+- 📱 **Device detection**  
+  Know what platform you are running on 
+- 📁 **File handling**  
+  MIME types, extensions, file type checks
+- 🎨 **Colors**  
+  Convert hex to Color, make colors lighter/darker
+- 💪 **Collections**  
+  Work with lists like a boss
+- 🔢 **Numbers**  
+  Format currencies, percentages, file sizes
+- 📝 **Text**  
+  Slugify, mask text, remove accents, the works!
+
+## Getting Started 🚀
+
+```yaml
+dependencies:
+  normie: ^2.0.0
+```
+
+## Quick Example 💡
 
 ```dart
 import 'package:normie/normie.dart';
 
 void main() {
-  // Format a date using the default date format
-  final formattedDate = Normie.formatDate(date: DateTime.now().toString());
-
-  // Validate an email address
-  final isValidEmail = Normie.isValidEmail('example@example.com');
-
-  // Truncate a string
-  final truncatedString = Normie.truncate('This is a long string', 10);
+  // Validate stuff
+  final isValid = Normie.check.isEmail('cool@email.com');
   
-  // Generate a random color
-  final randomColor = Normie.randomColor();
-
-  // ...and many more utility methods at your disposal!
+  // Format numbers
+  final money = Normie.numeric.formatCurrency(42069.42);
+  
+  // Cache some data
+  Normie.cache.set('key', 'value');
+  
+  // Handle colors
+  final color = Normie.palette.hexToColor('#ff42069');
 }
 ```
 
-<!-- For a complete list of available methods and their usage, refer to the [API documentation](https://example.com/normie-docs). -->
+## Need Help? 🤝
 
-## Contributing
-
-Contributions to Normie are welcomed and encouraged! If you discover any bugs, have feature suggestions, or would like to contribute improvements, please open an issue or submit a pull request on the [GitHub repository](https://github.com/CodeSadhu/normie). Before contributing, kindly review the [contribution guidelines](https://github.com/CodeSadhu/normie/blob/main/CONTRIBUTING.md) for more details.
-
-## License
-
-Normie is licensed under the [MIT License](https://opensource.org/licenses/MIT), granting you the freedom to use this package in both personal and commercial projects. For more information, refer to the [LICENSE](https://example.com/normie-license) file.
-
-## Acknowledgments
-
-Normie extends its gratitude to the following individuals for their valuable contributions:
-
-- [CodeSadhu](https://github.com/CodeSadhu)
-
-Thank you for your outstanding contributions!
-
-## Contact
-
-If you have any questions, suggestions, or feedback, please feel free to reach out to us at `chat@codesadhu.com`. We appreciate your interest and look forward to hearing from you.
+Got questions? Found a bug? Wanna contribute? Hit me up at chat@codesadhu.com or create an issue on GitHub!
 
 ---
 
+Made with ❤️ by [CodeSadhu](https://github.com/CodeSadhu)  
+MIT Licensed 📜
