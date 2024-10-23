@@ -12,6 +12,7 @@
 * Complete architecture overhaul - methods are now organized into categories
 * All static methods moved to their respective utility classes
 * Changed method access pattern from `Normie.method()` to `Normie.category.method()`
+* Added [detailed documentation](https://codesadhu-labs.gitbook.io/normie/getting-started) for all categories and methods. 
 
 ### New Features 🎉
 * Added 12 specialized utility categories:
@@ -30,16 +31,6 @@
 
 ### Improvements 🔨
 * Better organization and maintainability
-* More consistent API design
+* More consistent design
 * Expanded functionality in every category
 * Better type safety and null safety support
-
-## 1.0.0
-
-* Initial release with basic utility methods:
-  * String operations (reverse, truncate, titleCase, getStringInitial)
-  * Date formatting (formatDate, getWeekDayDate)
-  * Color utilities (hexToColor, colorToHex, randomColor)
-  * Basic validation (isValidEmail)
-  * File utilities (getFileExtension)
-  * Math utilities (rotate)
